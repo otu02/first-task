@@ -10,5 +10,5 @@ defined('SITE_ROOT') ? null : define("SITE_ROOT", "directory path");
 defined('LIB_PATH') ? null : define("LIB_PATH", SITE_ROOT.DS."includes");
 
 // load files in
-require_once('config.php');
-require_once('database.php');
+require_once(LIB_PATH.DS.'config.php');
+require_once(LIB_PATH.DS.'database.php');

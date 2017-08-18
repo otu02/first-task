@@ -62,6 +62,8 @@ function fullname() {
     <p><small>&copy; copyright <?php echo date("Y"); ?> Slack Test.</small></p>
     <?php mysqli_close($connection); ?>
   </footer>
+  </body>
+</html>
   
   
   

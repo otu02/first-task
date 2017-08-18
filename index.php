@@ -20,7 +20,7 @@ while($result = mysqli_fetch_assoc($row)) {
   $stud_details[] = $result;
 }
 
-function fullname("$firstname", "$lastname") {
+function fullname() {
   echo $tud_details['firstname'] ." ". $stud_details['lastname'];
 }
 

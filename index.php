@@ -9,7 +9,7 @@ defined('DB_NAME') ? null : define("DB_NAME", "stud_details");
 $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 if(!$connection) { die("Database connection failed: ". mysqli_error($connection)); }
 
-$sql = "SELECT * FROM stud_details";
+$sql = "SELECT * FROM students";
 $row = mysqli_query($connection, $sql);
 if(!$row) {
   die("Database query failed: ". mysqli_error($connection));

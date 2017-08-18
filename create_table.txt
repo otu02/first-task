@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `stud_details`;
-CREATE TABLE `stud_details` (
+DROP TABLE IF EXISTS `students`;
+CREATE TABLE `students` (
   `id` int(11) NOT NULL auto_increment,
   `firstname` varchar(50) NOT NULL,
   `last_name` varchar(30) NOT NULL,

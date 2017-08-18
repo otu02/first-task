@@ -1,3 +1,5 @@
+// Create database table if not exist
+
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
   `id` int(11) NOT NULL auto_increment,
@@ -8,3 +10,15 @@ CREATE TABLE `students` (
   `phone` int(11) NOT NULL
   PRIMARY KEY  (`id`)
 );
+
+// Insert into students table
+INSERT INTO `students' VALUES ( 1, 'John', 'Knok', 'Male', 'johnknok@gmail.com', 08098575647),
+  ( 2, 'Jane', 'Bull', 'Female', 'janebull23@gmail.com', 08098578945),
+  ( 3, 'Trust', 'Reed', 'Male', 'trustreed11@gmail.com', 09038556647),
+  ( 4, 'Frank', 'Peters', 'Male', 'frankpeters@gmail.com', 07065984745);
+  
+  
+  
+  
+  
+  

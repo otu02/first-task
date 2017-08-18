@@ -9,10 +9,10 @@ defined('DB_NAME') ? null : define("DB_NAME", "stud_details");
 $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 if(!$connection) { die("Database connection failed: ". mysqli_error($connection)); }
 
-$sql = "SELECT * FROM stud_details WHERE id=1 LIMIT 1";
+$sql = "SELECT * FROM stud_details";
 $row = mysqli_query($connection, $sql);
 if(!$row) {
-  die("Database query failed: ". mysqli_error($connection))
+  die("Database query failed: ". mysqli_error($connection));
 }
 
 $stud_details = [];
@@ -21,7 +21,7 @@ while($result = mysqli_fetch_assoc($row)) {
 }
 
 function fullname() {
-  echo $tud_details['firstname'] ." ". $stud_details['lastname'];
+  echo strtoupper($tud_details['lastname']), ." ". $stud_details['firstname'];
 }
 
 ?>
@@ -35,6 +35,33 @@ function fullname() {
 <body>
   <header>
     <h2>Welcome Student Profile system</h2>
+  </header>
+  <section>
+    <h2>Student details</h2>
+    <?php foreach($stud_details as $student): ?>
+    <table>
+      <tr>
+        <th colspan="5">Student details</th>
+      </tr>
+      <tr>
+        <td><?php echo student['firstname']; ?></td>
+        <td><?php echo student['lastname']; ?></td>
+        <td><?php echo student['gender'];?></td>
+        <td><?php echo student['email']; ?></td>
+        <td><?php echo student['phone']; ?></td>
+      </tr>
+    </table>
+    <?php endforeach; ?>
+  </section>
+  <footer>
+  <p>contact us</p>
+    <address>
+      For more details, contact
+      <a href="mailto:customerservice@example.com">Customer Service</a>.
+    </address>
+    <p><small>&copy; copyright <?php echo date("Y"); ?> Slack Test.</small></p>
+    <?php mysqli_close($connection); ?>
+  </footer>
   
   
   

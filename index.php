@@ -1,5 +1,4 @@
 <?php
-
 //Database setup
 defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
 defined('DB_USER') ? null : define("DB_USER", "admin");
@@ -21,9 +20,8 @@ while($result = mysqli_fetch_assoc($row)) {
 }
 
 function fullname() {
-  echo strtoupper($tud_details['lastname']), ." ". $stud_details['firstname'];
+  return strtoupper($stud_details['lastname']).", ".$stud_details['firstname'];
 }
-
 ?>
 <html>
 <head>

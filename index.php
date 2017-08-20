@@ -36,18 +36,18 @@ function fullname() {
   </header>
   <section>
     <h2>Student details</h2>
-    <?php foreach($stud_details as $student): ?>
     <table>
       <tr>
         <th colspan="5">Student details</th>
       </tr>
+    <?php foreach($stud_details as $student): ?>
       <tr>
-        <td><?php echo student['firstname']; ?></td>
-        <td><?php echo student['lastname']; ?></td>
-        <td><?php echo student['gender'];?></td>
-        <td><?php echo student['email']; ?></td>
-        <td><?php echo student['phone']; ?></td>
-      </tr>
+        <td><?php echo $student['firstname']; ?></td>
+        <td><?php echo $student['lastname']; ?></td>
+        <td><?php echo $student['gender'];?></td>
+        <td><?php echo $student['email']; ?></td>
+        <td><?php echo $student['phone']; ?></td>
+      </tr><br>
     </table>
     <?php endforeach; ?>
   </section>
